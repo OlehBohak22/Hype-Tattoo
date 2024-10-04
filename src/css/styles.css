@@ -117,7 +117,7 @@ header .container.header-wrapper {
 }
 
 .just-a-month-block p {
-  font-family: 'Mona-Sans';
+  font-family: 'Mona-sans';
   font-size: 0.9vw;
   font-weight: 600;
   line-height: 1vw;
@@ -132,7 +132,7 @@ header .container.header-wrapper {
 
 .join-link-text {
   position: relative;
-  font-family: 'Mona-Sans';
+  font-family: 'Mona-sans';
   font-size: 1.1vw;
   font-weight: 800;
   padding: 2vw 3vw;
@@ -250,7 +250,7 @@ header .container.header-wrapper {
 }
 
 .who-is-item-number span {
-  font-family: 'Mona-Sans';
+  font-family: 'Mona-sans';
   font-size: 0.7vw;
   line-height: 0.7vw;
   font-weight: 700;
@@ -271,7 +271,7 @@ header .container.header-wrapper {
 }
 
 .who-is-item p {
-  font-family: 'Mona-Sans';
+  font-family: 'Mona-sans';
   font-size: 0.7vw;
   font-weight: 600;
   line-height: 1vw;
