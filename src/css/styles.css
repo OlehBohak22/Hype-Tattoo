@@ -1,1 +1,323 @@
 @import url('./reset.css');
+@import url('../fonts/Druk-cyr/stylesheet.css');
+@import url('../fonts/Mona-sans/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ============================== HEADER =====================*/
+
+header .container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  z-index: 9;
+  padding-top: 2vw;
+}
+
+header .container.header-wrapper {
+  position: relative;
+  padding: 0;
+}
+
+.header-logo {
+  width: 3.4vw;
+  height: 4.01vw;
+}
+
+.header-menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.9vw;
+}
+
+.header-menu-btn > span {
+  font-family: 'Druk Cyr';
+  font-size: 2.4vw;
+  font-weight: 700;
+  line-height: 2.2vw;
+}
+
+.menu-icon-dots {
+  position: relative;
+  width: 2vw;
+  height: 2vw;
+}
+
+.menu-icon-dots span {
+  background-color: rgba(0, 208, 210, 1);
+  border-radius: 100%;
+  width: 0.6vw;
+  height: 0.6vw;
+}
+
+.menu-icon-dots span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menu-icon-dots span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.menu-icon-dots span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.menu-icon-dots span:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* ============================== HERO-SECTION======================= */
+
+.hero-section {
+  position: relative;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.01) 60%,
+      #000000 100%
+    ),
+    /* Градієнт */ url('../img/hero/hero-section-bg.jpg'); /* Фонове зображення */
+  background-size: 100% 100%; /* Зображення покриває весь блок */
+  background-repeat: no-repeat; /* Фон не повторюється */
+  padding-bottom: 6.25vw;
+  padding-top: 11vw;
+}
+
+.just-a-month-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.7vw;
+}
+
+.hero-title-block {
+  margin-bottom: 6.7vw;
+}
+
+.hero-title-block p {
+  font-family: 'Druk Cyr';
+  font-size: 3.4vw;
+  font-weight: 700;
+  line-height: 3.4vw;
+  text-transform: uppercase;
+  margin-bottom: 0.6vw;
+}
+
+.hero-title-block h1 {
+  font-family: 'Druk Cyr';
+  font-size: 11.5vw;
+  font-weight: 700;
+  line-height: 11.4vw;
+  text-transform: uppercase;
+  margin-bottom: 2.1vw;
+}
+
+.just-a-month-block p {
+  font-family: 'Mona-Sans';
+  font-size: 0.9vw;
+  font-weight: 600;
+  line-height: 1vw;
+  text-align: center;
+  width: 13.7vw;
+}
+
+.join-link {
+  display: flex;
+  gap: 0.2vw;
+}
+
+.join-link-text {
+  position: relative;
+  font-family: 'Mona-Sans';
+  font-size: 1.1vw;
+  font-weight: 800;
+  padding: 2vw 3vw;
+  text-transform: uppercase;
+  border: 0.05vw solid transparent; /* Ширина рамки */
+  border-image-source: radial-gradient(
+    57.98% 57.28% at 52.9% 39.1%,
+    rgba(0, 0, 0, 0.2) 80%,
+    /* Залишається прозорим до 80% */ rgba(21, 21, 21, 0.5) 100%
+      /* Різка зміна на 100% */
+  );
+  border-image-slice: 1; /* Розріз градієнта для рамки */
+}
+
+.join-link-text::before,
+.join-link-text::after,
+.join-link-text .corner-top-right,
+.join-link-text .corner-bottom-left {
+  content: '';
+  position: absolute;
+  border: 0.06vw solid black;
+  width: 0.91vw;
+  width: 0.91vw;
+  height: 0.91vw;
+}
+
+.join-link-text::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.join-link-text::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.join-link-text .corner-top-right {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.join-link-text .corner-bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+.join-link-arrow {
+  background-color: rgba(0, 208, 210, 1);
+  width: 5.4vw;
+  height: 5.4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-icon {
+  stroke: rgba(0, 0, 0, 1);
+  width: 0.9vw;
+  height: 1vw;
+}
+
+.who-is-title {
+  font-family: 'Druk Cyr';
+  font-size: 6.9vw;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+  margin-bottom: 2.1vw;
+  text-transform: uppercase;
+}
+
+.who-is-block {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.who-is-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.who-is-item {
+  padding: 1.4vw 1.7vw;
+  border-radius: 1.1vw;
+  border: 0.15vw solid rgba(255, 255, 255, 1);
+}
+
+.who-is-list .who-is-item {
+  flex-basis: calc(100% / 3);
+  height: 50%;
+}
+
+.who-is-item.full {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.3vw;
+}
+
+.who-is-item.full p {
+  width: 13vw;
+  text-align: center;
+}
+
+.who-is-main-block .who-is-item {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.who-is-item-number span {
+  font-family: 'Mona-Sans';
+  font-size: 0.7vw;
+  line-height: 0.7vw;
+  font-weight: 700;
+}
+
+.who-is-item h4 {
+  font-family: 'Druk Cyr';
+  font-size: 2.2vw;
+  font-weight: 700;
+  line-height: 2.2vw;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 0.6vw;
+}
+
+.who-is-main-block .who-is-item p {
+  width: 12vw;
+}
+
+.who-is-item p {
+  font-family: 'Mona-Sans';
+  font-size: 0.7vw;
+  font-weight: 600;
+  line-height: 1vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+.who-is-main-block .who-is-item p {
+  color: rgba(0, 0, 0, 1);
+}
+
+.who-is-main-block .who-is-item-number {
+  margin-bottom: 2.2vw;
+}
+
+.who-is-main-block .who-is-item h4 {
+  color: rgba(0, 0, 0, 1);
+}
+
+.who-is-main-block svg {
+  width: 11vw;
+  height: 11vw;
+  margin-top: 1.4vw;
+}
+
+.who-item-icon-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.2vw;
+}
+
+.who-item-icon-block svg {
+  fill: white;
+  width: 3.2vw;
+  height: 3.2vw;
+}
+
+.who-is-item-number .first {
+  color: rgba(255, 255, 255, 1);
+}
+.who-is-item-number .second {
+  color: rgba(255, 255, 255, 0.33);
+}
+
+.who-is-main-block .who-is-item-number .first {
+  color: rgba(0, 0, 0, 1);
+}
+.who-is-main-block .who-is-item-number .second {
+  color: rgba(0, 0, 0, 0.33);
+}
