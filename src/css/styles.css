@@ -209,7 +209,7 @@ header .container.header-wrapper {
 }
 
 .arrow-icon {
-  stroke: rgba(0, 0, 0, 1);
+  fill: rgba(0, 0, 0, 1);
   width: 0.9vw;
   height: 1vw;
 }
@@ -231,7 +231,8 @@ header .container.header-wrapper {
 .who-is-item {
   padding: 1.4vw 1.7vw;
   border-radius: 1.1vw;
-  border: 0.15vw solid rgba(255, 255, 255, 1);
+  outline: 2px solid rgba(255, 255, 255, 1);
+  outline-offset: -1px;
 }
 
 .who-is-list .who-is-item {
@@ -337,11 +338,22 @@ header .container.header-wrapper {
 /*===================== KIT SECTION =============================== */
 
 .kit-section {
-  background-image: url(../img/kit/kit-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
+  position: relative;
   padding: 3.6vw 0;
+}
+
+.kit-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 63vw;
+}
+
+.kit-squares {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 63vw;
 }
 
 .kit-marker-container {
@@ -496,6 +508,7 @@ header .container.header-wrapper {
   gap: 1.5vw;
   align-items: center;
   padding: 2.6vw 0 1vw 0;
+  cursor: pointer;
 }
 
 .journey-item:not(:last-child) {
@@ -597,6 +610,19 @@ header .container.header-wrapper {
   font-size: 1.3vw;
   font-weight: 500;
   line-height: 1.7vw;
+}
+
+.journey-info-container {
+  display: none; /* Спочатку приховані */
+}
+
+.journey-info-container.active {
+  display: block; /* Показуємо активний блок */
+}
+
+.journey-item.active {
+  font-weight: bold;
+  color: #000; /* Стиль для активного елемента */
 }
 
 /* BEST SECTION ================================ */
@@ -876,7 +902,7 @@ header .container.header-wrapper {
 }
 
 .tariff-item.hyper .arrow-icon {
-  stroke: white;
+  fill: white;
 }
 
 /* BLAST======= */
@@ -899,10 +925,6 @@ header .container.header-wrapper {
 .tariff-item.blast .join-link-text {
   background-color: rgba(255, 255, 255, 1);
   border: none;
-}
-
-.tariff-item.blast .arrow-icon {
-  stroke: rgba(255, 255, 255, 1);
 }
 
 .tariff-item.blast .join-link-text::before,
@@ -1010,6 +1032,7 @@ header .container.header-wrapper {
   background-color: rgba(0, 0, 0, 1);
   padding: 3.5vw;
   padding-bottom: 2vw;
+  height: 100vh;
 }
 
 .about-section p,
@@ -1517,7 +1540,7 @@ footer .join-link-arrow {
 }
 
 footer .arrow-icon {
-  stroke: white;
+  fill: white;
 }
 
 .footer-bottom-container {

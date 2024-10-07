@@ -63,3 +63,29 @@ const swiperEx = new Swiper('.ex-student-swiper-container', {
     // slideShadows: true,
   },
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const journeyItems = document.querySelectorAll('.journey-item');
+  const infoContainers = document.querySelectorAll('.journey-info-container');
+
+  journeyItems.forEach(item => {
+    item.addEventListener('click', function () {
+      // Видаляємо клас active у всіх journey-item та journey-info-container
+      journeyItems.forEach(i => i.classList.remove('active'));
+      infoContainers.forEach(container => container.classList.remove('active'));
+
+      // Додаємо клас active до вибраного journey-item
+      this.classList.add('active');
+
+      // Знаходимо відповідний journey-info-container і показуємо його
+      const target = this.getAttribute('data-target');
+      const activeContainer = document.querySelector(
+        `.journey-info-container[data-info="${target}"]`
+      );
+      if (activeContainer) {
+        activeContainer.classList.add('active');
+      }
+    });
+  });
+});
