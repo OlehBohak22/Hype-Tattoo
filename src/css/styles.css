@@ -1189,6 +1189,13 @@ header .container.header-wrapper {
   cursor: pointer;
 }
 
+.about-swiper-container .swiper-navigation .swiper-prev svg,
+.about-swiper-container .swiper-navigation .swiper-next svg {
+  width: 1vw;
+  height: 1vw;
+  stroke: rgba(0, 0, 0, 1);
+}
+
 .about-swiper-container .swiper-pagination-horizontal {
   height: fit-content;
   display: flex;
@@ -1210,4 +1217,328 @@ header .container.header-wrapper {
   height: 0.3vw;
   background-color: rgba(0, 208, 210, 1);
   border-radius: 0;
+}
+
+.custom-pagination {
+  position: absolute;
+  bottom: 3.9vw;
+  right: 3.6vw;
+  z-index: 100;
+}
+
+.custom-pagination .pagination-bullet {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-family: 'Mona-Sans';
+  font-size: 0.9vw;
+  font-weight: 500;
+  line-height: 1.3vw;
+  color: rgba(255, 255, 255, 1);
+  text-align: end;
+  cursor: pointer;
+}
+
+.custom-pagination .pagination-bullet.active {
+  color: rgba(0, 208, 210, 1);
+}
+
+.custom-pagination .pagination-bullet:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 0.05vw;
+  height: 1.6vw;
+  background-color: rgba(255, 255, 255, 1);
+  margin-right: 0.3vw;
+  margin-bottom: 0.3vw;
+  margin-top: 0.3vw;
+}
+
+/* =========================== EX_STUDENT_SECTION ================================ */
+
+.ex-student-section {
+  padding: 11.5vw 0;
+}
+
+.ex-student-section .container {
+  display: flex;
+  gap: 15vw;
+}
+
+.ex-student-title-container .title {
+  width: 30vw;
+  margin-bottom: 5.6vw;
+}
+
+.ex-student-card {
+  position: relative;
+  background-color: rgba(0, 208, 210, 1);
+  padding: 10.7vw 3.3vw 3.3vw 3.3vw;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.student-person-info {
+  display: flex;
+  align-items: center;
+  gap: 1.2vw;
+}
+
+.student-person-info img {
+  width: 5.3vw;
+}
+
+.student-person-info p {
+  font-family: 'Mona-Sans';
+  font-size: 1.6vw;
+  font-weight: 500;
+  line-height: 1.9vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+.student-card-desc {
+  font-family: 'Mona-Sans';
+  font-size: 1.2vw;
+  font-weight: 500;
+  line-height: 1.4vw;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 1.2vw;
+  width: 23vw;
+}
+
+.student-desc-container .add-desc {
+  font-family: 'Mona-Sans';
+  font-size: 0.9vw;
+  font-weight: 500;
+  line-height: 1.2vw;
+  width: 15vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+.ex-student-swiper-container {
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/ex-student/ex-student-swiper-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding-top: 0.9vw;
+  /* width: 37vw; */
+}
+
+.ex-student-swiper-container .swiper-slide {
+  width: 31vw !important;
+  height: 36vw !important;
+}
+
+.quotes {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  width: 16.4vw;
+  z-index: -1;
+}
+
+.ex-student-swiper-container .swiper-btn-prev {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 1);
+  width: 3.3vw;
+  height: 3.3vw;
+  left: 0;
+  top: 18vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.ex-student-swiper-container .swiper-btn-prev svg {
+  stroke: rgba(0, 208, 210, 1);
+  width: 1vw;
+  height: 1vw;
+}
+.ex-student-swiper-container .swiper-btn-next {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 1);
+  width: 3.3vw;
+  height: 3.3vw;
+  right: 0;
+  top: 9.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  cursor: pointer;
+}
+.ex-student-swiper-container .swiper-btn-next svg {
+  stroke: rgba(0, 208, 210, 1);
+  width: 1vw;
+  height: 1vw;
+}
+
+/* ==================== FAQ_SECTION ================================ */
+
+.faq-section {
+  padding-bottom: 11.4vw;
+}
+
+.faq-section .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-container {
+  width: 62.5vw;
+}
+
+.faq-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 2.3vw 0;
+  border-top: 0.06vw solid rgba(65, 65, 65, 1);
+}
+
+.faq-item p {
+  font-family: 'Mona-Sans';
+  font-size: 1.3vw;
+  font-weight: 600;
+  line-height: 1.6vw;
+}
+
+.faq-item div img {
+  width: 1.8vw;
+}
+
+.faq-item div {
+  border: 0.06vw solid rgba(65, 65, 65, 1);
+  border-radius: 100%;
+  width: 4.2vw;
+  height: 4.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.faq-item:hover div {
+  border: 0.06vw solid rgba(65, 65, 65, 0);
+}
+
+/* FOOTER =============================== */
+
+footer {
+  background-color: rgba(0, 208, 210, 1);
+  padding: 6.25vw 0 3.6vw 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: end;
+}
+
+.grid-container.links {
+  margin-bottom: 5.2vw;
+}
+
+.grid-container.address {
+  margin-bottom: 6.25vw;
+}
+
+.link-container p {
+  font-family: 'Mona-Sans';
+  font-size: 1.1vw;
+  font-weight: 700;
+  line-height: 1.5vw;
+  margin-bottom: 1.4vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+.link-container a {
+  font-family: 'Mona-Sans';
+  font-size: 3.4vw;
+  font-weight: 700;
+  line-height: 3.4vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+.underline {
+  position: relative;
+}
+
+.underline:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 0.2vw;
+  transform: translateY(100%);
+}
+
+.address-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2.3vw;
+  width: 40vw;
+}
+
+.addres-item {
+  flex-basis: calc((100% - 5.6vw) / 2);
+}
+
+.addres-item span {
+  display: block;
+  font-family: 'Mona-Sans';
+  font-size: 1.1vw;
+  font-weight: 700;
+  line-height: 1.3vw;
+  margin-bottom: 0.4vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+.addres-item p,
+.addres-item a {
+  display: block;
+  font-family: 'Mona-Sans';
+  font-size: 1.8vw;
+  font-weight: 500;
+  line-height: 2.2vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+footer .join-link-arrow {
+  background-color: black;
+}
+
+footer .arrow-icon {
+  stroke: white;
+}
+
+.footer-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-bottom-container div {
+  font-family: 'Mona-Sans';
+  font-size: 14.7vw;
+  font-weight: 700;
+  line-height: 14.7vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer-bottom-container p {
+  font-family: 'Mona-Sans';
+  font-size: 1.8vw;
+  font-weight: 500;
+  line-height: 2.2vw;
+  text-align: end;
+  color: rgba(255, 255, 255, 1);
 }
