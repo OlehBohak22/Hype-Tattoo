@@ -127,7 +127,8 @@ faqItems.forEach(item => {
     if (activeItem && activeItem !== item) {
       activeItem.classList.remove('active');
       activeItem.querySelector('.faq-acardeon-js').style.maxHeight = null; // Закриваємо контент
-      activeItem.querySelector('.faq-img img').src = './public/plus.svg'; // Змінюємо іконку на плюс
+      activeItem.querySelector('.faq-img img').src =
+        '/Hype-Tattoo/public/plus.svg'; // Змінюємо іконку на плюс
     }
 
     // Тепер відкриваємо або закриваємо поточний елемент
@@ -135,10 +136,10 @@ faqItems.forEach(item => {
     const content = item.querySelector('.faq-acardeon-js');
     if (item.classList.contains('active')) {
       content.style.maxHeight = content.scrollHeight + 'px'; // Відкриваємо контент
-      item.querySelector('.faq-img img').src = './public/minus.svg'; // Змінюємо іконку на мінус
+      item.querySelector('.faq-img img').src = '/Hype-Tattoo/public/minus.svg'; // Змінюємо іконку на мінус
     } else {
       content.style.maxHeight = null; // Закриваємо контент
-      item.querySelector('.faq-img img').src = './public/plus.svg'; // Змінюємо іконку на плюс
+      item.querySelector('.faq-img img').src = '/Hype-Tattoo/public/plus.svg'; // Змінюємо іконку на плюс
     }
   });
 });
