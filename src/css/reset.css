@@ -58,3 +58,15 @@ html {
 .no-scroll {
   overflow: hidden;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    width: 93.3vw;
+    padding: 0 2vw;
+  }
+
+  .title {
+    font-size: 16.5vw;
+    line-height: 16.5vw;
+  }
+}

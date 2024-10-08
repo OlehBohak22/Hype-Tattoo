@@ -4,7 +4,6 @@ import { Navigation, Pagination, EffectCards } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// Ініціалізація Swiper з режимом loop
 const swiper = new Swiper('.about-swiper-container', {
   modules: [Navigation, Pagination],
 
@@ -113,4 +112,33 @@ menuOverlay.addEventListener('click', e => {
   if (e.target.tagName === 'A') {
     closeMenu();
   }
+});
+
+// Отримуємо всі елементи аккордеону
+const faqItems = document.querySelectorAll('.faq-item');
+
+// Додаємо обробник події для кожного елемента
+faqItems.forEach(item => {
+  const faqTitle = item.querySelector('.faq-title-container');
+
+  faqTitle.addEventListener('click', () => {
+    // Перевіряємо чи вже є активний елемент, якщо так - закриваємо його
+    const activeItem = document.querySelector('.faq-item.active');
+    if (activeItem && activeItem !== item) {
+      activeItem.classList.remove('active');
+      activeItem.querySelector('.faq-acardeon-js').style.maxHeight = null; // Закриваємо контент
+      activeItem.querySelector('.faq-img img').src = './img/plus.svg'; // Змінюємо іконку на плюс
+    }
+
+    // Тепер відкриваємо або закриваємо поточний елемент
+    item.classList.toggle('active');
+    const content = item.querySelector('.faq-acardeon-js');
+    if (item.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + 'px'; // Відкриваємо контент
+      item.querySelector('.faq-img img').src = './img/minus.svg'; // Змінюємо іконку на мінус
+    } else {
+      content.style.maxHeight = null; // Закриваємо контент
+      item.querySelector('.faq-img img').src = './img/plus.svg'; // Змінюємо іконку на плюс
+    }
+  });
 });
