@@ -27,6 +27,10 @@ export default defineConfig(({ command }) => {
             return '[name].js';
           },
           assetFileNames: assetInfo => {
+            // Додаємо спеціальне правило для SVG-файлів
+            if (assetInfo.name && assetInfo.name.endsWith('.svg')) {
+              return 'assets/svg/[name]-[hash][extname]';
+            }
             if (assetInfo.name && assetInfo.name.endsWith('.html')) {
               return '[name].[ext]';
             }
@@ -44,5 +48,6 @@ export default defineConfig(({ command }) => {
         sort: 'mobile-first',
       }),
     ],
+    assetsInclude: ['**/*.svg'], // Додаємо SVG до активів
   };
 });
