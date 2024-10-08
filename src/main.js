@@ -64,7 +64,6 @@ const swiperEx = new Swiper('.ex-student-swiper-container', {
   },
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const journeyItems = document.querySelectorAll('.journey-item');
   const infoContainers = document.querySelectorAll('.journey-info-container');
@@ -89,3 +88,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+const menuBtn = document.querySelector('.header-menu-btn');
+const closeMenuBtn = document.querySelector('.close-overlay');
+const menuOverlay = document.querySelector('.menu-overlay');
+
+menuBtn.addEventListener('click', () => {
+  menuOverlay.classList.add('active');
+});
+
+closeMenuBtn.addEventListener("click", () => {
+  menuOverlay.classList.remove('active');
+  
+})
