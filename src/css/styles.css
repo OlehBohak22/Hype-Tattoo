@@ -150,9 +150,14 @@ header .container.header-wrapper {
   opacity: 1;
 }
 
-.menu-navigation ul li:not(:last-child) {
-  margin-bottom: 1.7vw;
+.menu-navigation ul{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+
 
 .close-overlay {
   display: flex;
@@ -161,7 +166,6 @@ header .container.header-wrapper {
   margin-top: 1.5vw;
   cursor: pointer;
   justify-content: end;
-  margin-bottom: 7.4vw;
 }
 
 .close-overlay span {
@@ -185,6 +189,10 @@ header .container.header-wrapper {
 
 .right-menu-container {
   width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .right-menu-container h2 {
@@ -1183,6 +1191,8 @@ header .container.header-wrapper {
   padding: 3.5vw;
   padding-bottom: 2vw;
   height: 100vh;
+  overflow: hidden;
+
 }
 
 .about-section p,
