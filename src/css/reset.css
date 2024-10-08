@@ -50,3 +50,7 @@ main {
   padding: 0 0.5vw;
   margin: 0 auto;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -93,11 +93,22 @@ const menuBtn = document.querySelector('.header-menu-btn');
 const closeMenuBtn = document.querySelector('.close-overlay');
 const menuOverlay = document.querySelector('.menu-overlay');
 
+// Функція для закриття меню
+const closeMenu = () => {
+  menuOverlay.classList.remove('active');
+};
+
+// Відкриття меню
 menuBtn.addEventListener('click', () => {
   menuOverlay.classList.add('active');
 });
 
-closeMenuBtn.addEventListener("click", () => {
-  menuOverlay.classList.remove('active');
-  
-})
+// Закриття меню по кліку на кнопку закриття або посилання всередині оверлею
+closeMenuBtn.addEventListener('click', closeMenu);
+
+// Закриття меню по кліку на будь-яке посилання всередині меню
+menuOverlay.addEventListener('click', e => {
+  if (e.target.tagName === 'A') {
+    closeMenu();
+  }
+});
