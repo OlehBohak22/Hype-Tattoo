@@ -666,8 +666,8 @@ header .container.header-wrapper {
 }
 
 .journey-item {
-  display: flex;
-  gap: 1.5vw;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   align-items: center;
   padding: 2.6vw 0 1vw 0;
   cursor: pointer;
