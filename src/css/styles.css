@@ -153,7 +153,8 @@ header .container.header-wrapper {
 .menu-navigation ul {
   display: flex;
   flex-direction: column;
-  gap: 1.7vw;
+  justify-content: space-between;
+  height: 40vw;
 }
 
 .close-overlay {
@@ -213,6 +214,11 @@ header .container.header-wrapper {
   fill: white;
 }
 
+.right-menu-container .join-link-text {
+  font-size: 1.3vw;
+  padding: 0 4vw;
+}
+
 .menu-address-container {
   display: flex;
   justify-content: space-between;
@@ -225,6 +231,7 @@ header .container.header-wrapper {
   font-weight: 700;
   line-height: 2.9vw;
   color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
 }
 
 .menu-address-container p {
