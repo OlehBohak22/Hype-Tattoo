@@ -154,7 +154,7 @@ header .container.header-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 40vw;
+  height: calc(100% - 7vw);
 }
 
 .close-overlay {
