@@ -150,14 +150,11 @@ header .container.header-wrapper {
   opacity: 1;
 }
 
-.menu-navigation ul{
-  height: 100%;
+.menu-navigation ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 1.7vw;
 }
-
-
 
 .close-overlay {
   display: flex;
@@ -1192,7 +1189,6 @@ header .container.header-wrapper {
   padding-bottom: 2vw;
   height: 100vh;
   overflow: hidden;
-
 }
 
 .about-section p,
