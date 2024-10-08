@@ -96,11 +96,13 @@ const menuOverlay = document.querySelector('.menu-overlay');
 // Функція для закриття меню
 const closeMenu = () => {
   menuOverlay.classList.remove('active');
+  document.body.classList.remove('no-scroll'); // Відновити скрол
 };
 
 // Відкриття меню
 menuBtn.addEventListener('click', () => {
   menuOverlay.classList.add('active');
+  document.body.classList.add('no-scroll'); // Заблокувати скрол
 });
 
 // Закриття меню по кліку на кнопку закриття або посилання всередині оверлею
