@@ -6,6 +6,7 @@ import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => {
   return {
+    base: '/Hype-Tattoo/', // Додайте це, щоб забезпечити правильні шляхи для GitHub Pages
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
@@ -27,7 +28,6 @@ export default defineConfig(({ command }) => {
             return '[name].js';
           },
           assetFileNames: assetInfo => {
-            // Додаємо спеціальне правило для SVG-файлів
             if (assetInfo.name && assetInfo.name.endsWith('.svg')) {
               return 'assets/svg/[name]-[hash][extname]';
             }
@@ -48,6 +48,6 @@ export default defineConfig(({ command }) => {
         sort: 'mobile-first',
       }),
     ],
-    assetsInclude: ['**/*.svg'], // Додаємо SVG до активів
+    assetsInclude: ['**/*.svg'],
   };
 });
