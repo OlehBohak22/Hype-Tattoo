@@ -6,7 +6,7 @@ const GLYPHS =
 
 const App = () => {
   const [text, setText] = useState('Join the course');
-  const [speed, setSpeed] = useState(0.2);
+  const [speed, setSpeed] = useState(0.1);
   const [explode, setExplode] = useState(false);
 
   useEffect(() => {
