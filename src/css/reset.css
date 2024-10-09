@@ -27,7 +27,13 @@ button {
   cursor: pointer;
 }
 
-img {
+input{
+  outline: none;
+}
+
+img,
+video
+ {
   display: block;
   max-width: 100%;
   height: auto;

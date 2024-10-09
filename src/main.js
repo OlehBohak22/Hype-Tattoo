@@ -55,6 +55,7 @@ const swiperEx = new Swiper('.ex-student-swiper-container', {
   },
   slidesPerView: 'auto',
   centeredSlides: true,
+  loop: true,
   effect: 'cards',
   cardsEffect: {
     // perSlideOffset: 20, // Space between cards in px
@@ -139,6 +140,80 @@ faqItems.forEach(item => {
     } else {
       content.style.maxHeight = null; // Закриваємо контент
       item.querySelector('.faq-img img').src = './plus.svg'; // Змінюємо іконку на плюс
+    }
+  });
+});
+
+// Отримуємо всі інпути в формі
+const inputs = document.querySelectorAll('.form-input-container input');
+
+// Перевіряємо кожен інпут на наявність введеного тексту
+inputs.forEach(input => {
+  // Перевірка при завантаженні сторінки (якщо вже введене значення)
+  if (input.value) {
+    input.classList.add('filled');
+  }
+
+  // Перевірка при втраті фокусу
+  input.addEventListener('blur', () => {
+    if (input.value) {
+      input.classList.add('filled'); // Додаємо клас, якщо є текст
+    } else {
+      input.classList.remove('filled'); // Видаляємо клас, якщо поле порожнє
+    }
+  });
+});
+
+// Отримуємо всі кнопки, які відкривають попапи
+const openPopupButtons = document.querySelectorAll('.open-popup');
+
+// Додаємо обробники подій на всі кнопки
+openPopupButtons.forEach(button => {
+  button.addEventListener('click', e => {
+    e.preventDefault(); // Запобігаємо стандартній поведінці посилання
+
+    // Отримуємо ID попапу з атрибута data-popup-id
+    const popupId = button.getAttribute('data-popup-id');
+    const popup = document.getElementById(popupId); // Отримуємо попап по ID
+
+    // Якщо це попап з ID tariffPopup, оновлюємо його заголовок та іконку
+    if (popupId === 'tariffPopup') {
+      // Знаходимо батьківський елемент тарифу
+      const tariffItem = button.closest('.tariff-item');
+
+      // Отримуємо дані з атрибутів тарифу
+      const title = tariffItem.getAttribute('data-title');
+      const icon = tariffItem.getAttribute('data-icon');
+
+      // Оновлюємо заголовок і іконку в попапі
+      const popupTitle = popup.querySelector('.popup-title-container p');
+      const popupIcon = popup.querySelector('.popup-title-container svg use');
+      popupTitle.textContent = `You plan ${title}`;
+      popupIcon.setAttribute('href', icon);
+    }
+
+    // Відкриваємо попап, додаючи клас active
+    popup.classList.add('active');
+  });
+});
+
+// Отримуємо всі елементи для закриття попапу
+const closePopupButtons = document.querySelectorAll('.popup-close');
+
+// Додаємо обробники для закриття попапу
+closePopupButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const popup = button.closest('.popup-overlay');
+    popup.classList.remove('active');
+  });
+});
+
+// Закриття попапу при кліку на фон
+const popups = document.querySelectorAll('.popup-overlay');
+popups.forEach(popup => {
+  popup.addEventListener('click', e => {
+    if (e.target === popup) {
+      popup.classList.remove('active');
     }
   });
 });
