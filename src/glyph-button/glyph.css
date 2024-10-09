@@ -1,0 +1,88 @@
+/* Основний стиль для кнопки */
+.join-link button {
+  font-family: 'Mono-Sans';
+  text-transform: uppercase;
+  color: canvasText;
+  padding: 1rem 2rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* Ефекти на псевдоелемент при ховері на .join-link */
+.join-link:hover button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: calc(var(--intent, 0) * 0.0875);
+  transition: opacity 0.2s;
+}
+
+/* Псевдокласи для активації ефектів при ховері на .join-link */
+.join-link:hover button {
+  --intent: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Стиль для тексту всередині кнопки */
+button > span:not(.sr-only) {
+  position: relative;
+  color: transparent;
+  font-family: 'Mona-sans';
+  font-size: 1.1vw;
+  font-weight: 800;
+}
+
+/* Колір тексту при ховері на .join-link */
+.join-link button > span:not(.sr-only)::after {
+  /* color: rgba(0, 208, 210, 1); */
+}
+
+/* Стилі для анімації тексту */
+button > span:not(.sr-only)::after {
+  content: attr(data-char);
+  position: absolute;
+  display: inline-block;
+  inset: 0;
+  color: canvasText;
+}
+
+/* Анімація при ховері на .join-link */
+.join-link:hover button > span:not(.sr-only)::after {
+  animation: flash calc(var(--speed, 0.25) * 1s) calc(var(--index, 0) * 0.05s)
+    steps(1, end);
+}
+
+/* Анімація "перебору" символів */
+@keyframes flash {
+  0%,
+  20% {
+    content: '_';
+  }
+  40% {
+    content: var(--char-1);
+  }
+  60% {
+    content: var(--char-2);
+  }
+  80% {
+    content: var(--char-3);
+  }
+}
+
+.dummy {
+  display: none;
+}
