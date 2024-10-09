@@ -222,7 +222,6 @@ header .container.header-wrapper {
   justify-content: space-between;
   align-items: end;
   margin-top: 3.1vw;
-
 }
 
 .menu-address-container a {
@@ -730,7 +729,7 @@ header .container.header-wrapper {
   max-width: 32vw;
   height: min-content;
   position: sticky;
-  top: 0;
+  top: 5vh;
 }
 
 .journey-info-title-block h3 {
