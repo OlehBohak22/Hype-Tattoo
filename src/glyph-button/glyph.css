@@ -47,8 +47,8 @@ button > span:not(.sr-only) {
 }
 
 /* Колір тексту при ховері на .join-link */
-.join-link button > span:not(.sr-only)::after {
-  /* color: rgba(0, 208, 210, 1); */
+.best-section .join-link button > span:not(.sr-only)::after {
+  color: rgba(0, 208, 210, 1);
 }
 
 /* Стилі для анімації тексту */
