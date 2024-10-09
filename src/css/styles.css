@@ -303,6 +303,7 @@ header .container.header-wrapper {
   display: flex;
   gap: 0.2vw;
   cursor: pointer;
+  width: fit-content;
 }
 
 .app {
