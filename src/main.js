@@ -189,7 +189,7 @@ openPopupButtons.forEach(button => {
       const popupTitle = popup.querySelector('.popup-title-container p');
       const popupIcon = popup.querySelector('.popup-title-container svg use');
       popupTitle.textContent = `You plan ${title}`;
-      popupIcon.setAttribute('href', icon);
+      popupIcon.setAttribute('href', `/Hype-Tattoo${icon}`);
     }
 
     // Відкриваємо попап, додаючи клас active
