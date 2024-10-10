@@ -109,6 +109,7 @@ button > span:not(.sr-only)::after {
 
 .join-link:hover .arrow-icon{
   transform: rotate(405deg);
+  fill: white;
 }
 
 .join-link:hover .join-link-arrow{
