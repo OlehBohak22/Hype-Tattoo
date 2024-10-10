@@ -541,43 +541,7 @@ header .container.header-wrapper {
   color: rgba(0, 0, 0, 0.33);
 }
 
-/* Загальні налаштування для анімацій */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px); /* Початкове положення нижче */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); /* Плавно переміщається в початкове положення */
-  }
-}
 
-/* Анімація для заголовку */
-.hero-section .hero-title-block h1 {
-  animation: fadeInUp 1.2s ease-out forwards;
-  opacity: 0;
-}
-
-.hero-section .hero-title-block p {
-  animation: fadeInUp 1.5s ease-out forwards;
-  opacity: 0;
-}
-
-.hero-section .who-is-title {
-  animation: fadeInUp 1.8s ease-out forwards;
-  opacity: 0;
-}
-
-.hero-section .who-is-item {
-  animation: fadeInUp 2s ease-out forwards;
-  opacity: 0;
-}
-
-.hero-section .join-link {
-  animation: fadeInUp 2.5s ease-out forwards;
-  opacity: 0;
-}
 
 /*===================== KIT SECTION =============================== */
 
