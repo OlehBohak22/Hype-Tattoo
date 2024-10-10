@@ -342,7 +342,7 @@ header .container.header-wrapper {
 .app .corner-bottom-left {
   content: '';
   position: absolute;
-  border: 0.09vw solid black;
+  border: 0.1vw solid black;
   width: 0.91vw;
   width: 0.91vw;
   height: 0.91vw;
@@ -358,14 +358,14 @@ header .container.header-wrapper {
 
 .app::after {
   bottom: -1px;
-  right: -1px;
+  right: -0.5px;
   border-left: none;
   border-top: none;
 }
 
 .app .corner-top-right {
   top: -1px;
-  right: -1px;
+  right: -0.5px;
   border-left: none;
   border-bottom: none;
 }
@@ -544,8 +544,6 @@ header .container.header-wrapper {
   color: rgba(0, 0, 0, 0.33);
 }
 
-
-
 /*===================== KIT SECTION =============================== */
 
 .kit-section {
@@ -663,7 +661,6 @@ header .container.header-wrapper {
   top: 0;
   width: 25vw;
   margin-bottom: 9.2vw;
-  z-index: 1;
 }
 
 .learn-list {
