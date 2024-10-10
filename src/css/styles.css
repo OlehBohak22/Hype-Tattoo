@@ -256,6 +256,16 @@ header .container.header-wrapper {
   background-repeat: no-repeat; /* Фон не повторюється */
   padding-bottom: 6.25vw;
   padding-top: 11vw;
+  animation: backgroundZoomOut 3s ease-in-out forwards; /* Анімація зум-ауту */
+}
+
+@keyframes backgroundZoomOut {
+  0% {
+    background-size: 120%; /* Початкова точка - великий фон */
+  }
+  100% {
+    background-size: 100%; /* Кінцева точка - нормальний розмір */
+  }
 }
 
 .just-a-month-block {
@@ -529,6 +539,44 @@ header .container.header-wrapper {
 }
 .who-is-item:hover .second {
   color: rgba(0, 0, 0, 0.33);
+}
+
+/* Загальні налаштування для анімацій */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Початкове положення нижче */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Плавно переміщається в початкове положення */
+  }
+}
+
+/* Анімація для заголовку */
+.hero-section .hero-title-block h1 {
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-section .hero-title-block p {
+  animation: fadeInUp 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-section .who-is-title {
+  animation: fadeInUp 1.8s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-section .who-is-item {
+  animation: fadeInUp 2s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-section .join-link {
+  animation: fadeInUp 2.5s ease-out forwards;
+  opacity: 0;
 }
 
 /*===================== KIT SECTION =============================== */
