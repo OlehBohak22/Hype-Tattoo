@@ -4,8 +4,8 @@ import { render } from 'https://cdn.skypack.dev/react-dom';
 const GLYPHS =
   'ラドクリフマラソンわたしワタシんょンョたばこタバコとうきょうトウキョウ0123456789±!@#$%^&*()_+ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-const App = () => {
-  const [text, setText] = useState('Join the course');
+const App = ({ srOnlyTextProp }) => {
+  const [text, setText] = useState(srOnlyTextProp);
   const [speed, setSpeed] = useState(0.15);
   const [explode, setExplode] = useState(false);
 
@@ -38,7 +38,7 @@ const App = () => {
             </span>
           );
         })}
-        <span className="sr-only">{text}</span>
+        <span className="sr-only">{srOnlyTextProp}</span>
       </button>
       <button className="dummy">{text}</button>
     </>
@@ -46,38 +46,10 @@ const App = () => {
 };
 
 // Масив ID DOM-вузлів
-const rootNodes = [
-  'app1',
-  'app2',
-  'app3',
-  'app4',
-  'app5',
-  'app6',
-  'app7',
-  'app8',
-  'app9',
-  'app10',
-  'app11',
-  'app12',
-  'app13',
-  'app14',
-  'app15',
-  'app16',
-  'app17',
-  'app18',
-  'app19',
-  'app20',
-  'app21',
-  'app22',
-  'app23',
-  'app24',
-  'app25',
-];
+const rootNodes = document.querySelectorAll('[data-sr-text]');
 
-// Цикл для рендерингу компонентів у всі зазначені вузли
-rootNodes.forEach(id => {
-  const rootNode = document.querySelector(`#${id}`);
-  if (rootNode) {
-    render(<App />, rootNode);
-  }
+// Цикл для рендерингу компонентів у всі зазначені вузли з текстом із HTML
+rootNodes.forEach(rootNode => {
+  const srOnlyText = rootNode.getAttribute('data-sr-text'); // Отримуємо текст із атрибута
+  render(<App srOnlyTextProp={srOnlyText} />, rootNode);
 });

@@ -301,7 +301,7 @@ header .container.header-wrapper {
 
 .join-link {
   display: flex;
-  gap: 0.2vw;
+  gap: 0.1vw;
   cursor: pointer;
   width: fit-content;
 }
@@ -571,9 +571,12 @@ header .container.header-wrapper {
   font-size: 1vw;
   font-weight: 600;
   line-height: 1.2vw;
-  padding: 0.5vw 0.9vw;
   border: 0.05vw solid black;
   border-radius: 100%;
+  width: 2.2vw;
+  height: 2.2vw;
+  display: flex;
+  justify-content: center;align-items: center;
 }
 
 .kit-list .kit-text {
@@ -594,11 +597,15 @@ header .container.header-wrapper {
 }
 
 .learn-section .title {
+  position: sticky;
+  top: 0;
   width: 25vw;
   margin-bottom: 9.2vw;
+  z-index: 1;
 }
 
 .learn-list {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -623,8 +630,8 @@ header .container.header-wrapper {
 
 .learn-list .column:nth-child(2) {
   position: absolute;
-  top: 12.8vw;
-  right: 4vw;
+  top: -21vw;
+  right: 0;
 }
 
 .learn-item svg {
@@ -727,7 +734,6 @@ header .container.header-wrapper {
 }
 
 .journey-info-container {
-  max-width: 32vw;
   height: min-content;
   position: sticky;
   top: 5vh;
@@ -779,6 +785,7 @@ header .container.header-wrapper {
   font-size: 1.3vw;
   font-weight: 500;
   line-height: 1.7vw;
+  max-width: 32vw;
 }
 
 .journey-info-container {
@@ -1025,7 +1032,7 @@ header .container.header-wrapper {
 }
 
 .tariff-item .join-link {
-  justify-content: space-between;
+  width: 100%;
 }
 
 .tariff-item .app {
@@ -2054,7 +2061,7 @@ footer .arrow-icon {
 }
 
 .popup-content .join-link {
-  margin-bottom: 2.1vw;
+  width: 100%;
 }
 
 .popup-bottom-text {
@@ -2063,6 +2070,7 @@ footer .arrow-icon {
   font-weight: 500;
   line-height: 0.9vw;
   max-width: 12vw;
+  margin-top: 2.1vw;
 }
 
 .popup-bottom-text p {

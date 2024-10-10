@@ -3,7 +3,7 @@
   font-family: 'Mono-Sans';
   text-transform: uppercase;
   color: canvasText;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   border: 0;
   background: transparent;
   cursor: pointer;
@@ -83,6 +83,12 @@ button > span:not(.sr-only)::after {
   }
 }
 
-.dummy {
-  display: none;
+.join-link button{
+  display: block;
 }
+
+.dummy {
+  display: none !important;
+}
+
+
