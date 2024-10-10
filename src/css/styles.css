@@ -350,22 +350,22 @@ header .container.header-wrapper {
 }
 
 .app::before {
-  top: -1px;
-  left: -1px;
+  top: -1px !important;
+  left: -1px !important;
   border-right: none;
   border-bottom: none;
 }
 
 .app::after {
-  bottom: -1px;
-  right: -1px;
+  bottom: -0.5px !important;
+  right: -1px !important;
   border-left: none;
   border-top: none;
 }
 
 .app .corner-top-right {
-  top: -1px;
-  right: -0.5px;
+  top: -1px !important;
+  right: -0.5px !important;
   border-left: none;
   border-bottom: none;
 }
