@@ -311,7 +311,7 @@ header .container.header-wrapper {
 
 .join-link {
   display: flex;
-  gap: 0.1vw;
+  gap: 0.2vw;
   cursor: pointer;
   width: fit-content;
 }
