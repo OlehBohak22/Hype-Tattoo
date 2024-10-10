@@ -108,7 +108,7 @@ button > span:not(.sr-only)::after {
 
 
 .join-link:hover .arrow-icon{
-  transform: rotate(45deg);
+  transform: rotate(405deg);
 }
 
 .join-link:hover .join-link-arrow{
@@ -123,3 +123,10 @@ button > span:not(.sr-only)::after {
   transform: translateY(-50%) translateX(50%);
 
 }
+
+
+
+
+
+
+
