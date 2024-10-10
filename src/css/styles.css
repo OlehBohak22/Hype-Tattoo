@@ -538,16 +538,6 @@ header .container.header-wrapper {
   padding: 3.6vw 0;
 }
 
-.kit-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 63vw;
-}
-
-
-
-
 .kit-marker-container {
   display: flex;
   margin-bottom: 0.8vw;
@@ -574,13 +564,6 @@ header .container.header-wrapper {
 
 .kit-title-wrapper .title {
   width: 25vw;
-}
-
-.kit-list{
-  width: 33vw;
-  position: relative;
-  z-index: 999;
-  background-color: rgba(249, 249, 249, 1);
 }
 
 .kit-list ul {
@@ -619,11 +602,15 @@ header .container.header-wrapper {
   line-height: 1.4vw;
 }
 
+.kit-bg {
+  width: 63vw;
+}
+
 .kit-squares {
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
-  animation: levitate 4s ease-in-out infinite; /* Левітація */
+  animation: levitate 4s ease-in-out infinite;
   right: 2.9vw;
   width: 63vw;
 }
@@ -639,6 +626,9 @@ header .container.header-wrapper {
 }
 
 .kit-paralax-container {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: fit-content;
   overflow: hidden;
 }
