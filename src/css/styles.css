@@ -358,7 +358,7 @@ header .container.header-wrapper {
 
 .app::after {
   bottom: -1px;
-  right: -0.5px;
+  right: -1px;
   border-left: none;
   border-top: none;
 }
@@ -371,7 +371,7 @@ header .container.header-wrapper {
 }
 
 .app .corner-bottom-left {
-  bottom: -1px;
+  bottom: -0.5px;
   left: -1px;
   border-right: none;
   border-top: none;
