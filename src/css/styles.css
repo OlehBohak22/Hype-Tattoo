@@ -365,7 +365,7 @@ header .container.header-wrapper {
 
 .app .corner-top-right {
   top: -1px !important;
-  right: -0.5px !important;
+  right: -1px !important;
   border-left: none;
   border-bottom: none;
 }
