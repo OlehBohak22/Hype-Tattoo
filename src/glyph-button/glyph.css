@@ -83,7 +83,7 @@ button > span:not(.sr-only)::after {
   }
 }
 
-.join-link button{
+.join-link button {
   display: block;
 }
 
@@ -91,4 +91,35 @@ button > span:not(.sr-only)::after {
   display: none !important;
 }
 
+.join-link .app::before {
+  transition: 0.5s;
+}
 
+.join-link:hover  .app::before {
+  transform: translateY(50%) translateX(50%);
+}
+.join-link .app::after {
+  transition: 0.5s;
+}
+
+.join-link:hover  .app::after {
+  transform: translateY(-50%) translateX(-50%);
+}
+
+
+.join-link:hover .arrow-icon{
+  transform: rotate(45deg);
+}
+
+.join-link:hover .join-link-arrow{
+  background-color: rgba(255, 24, 178, 1)
+}
+
+.join-link:hover .corner-top-right{
+  transform: translateY(50%) translateX(-50%);
+
+}
+.join-link:hover .corner-bottom-left{
+  transform: translateY(-50%) translateX(50%);
+
+}

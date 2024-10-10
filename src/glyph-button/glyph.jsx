@@ -41,6 +41,9 @@ const App = ({ srOnlyTextProp }) => {
         <span className="sr-only">{srOnlyTextProp}</span>
       </button>
       <button className="dummy">{text}</button>
+
+      <span className="corner-top-right"></span>
+      <span className="corner-bottom-left"></span>
     </>
   );
 };

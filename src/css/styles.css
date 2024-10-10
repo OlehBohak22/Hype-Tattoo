@@ -342,10 +342,11 @@ header .container.header-wrapper {
 .app .corner-bottom-left {
   content: '';
   position: absolute;
-  border: 0.06vw solid black;
+  border: 0.09vw solid black;
   width: 0.91vw;
   width: 0.91vw;
   height: 0.91vw;
+  transition: 0.5s;
 }
 
 .app::before {
@@ -383,12 +384,14 @@ header .container.header-wrapper {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: 0.5s;
 }
 
 .arrow-icon {
   fill: rgba(0, 0, 0, 1);
   width: 0.9vw;
   height: 1vw;
+  transition: 0.5s;
 }
 
 .who-is-title {
