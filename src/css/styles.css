@@ -396,6 +396,7 @@ header .container.header-wrapper {
 }
 
 .who-is-item {
+  transition: 0.5s;
   padding: 1.4vw 1.7vw;
   border-radius: 1.1vw;
   outline: 2px solid rgba(255, 255, 255, 1);
@@ -415,8 +416,10 @@ header .container.header-wrapper {
   gap: 3.3vw;
 }
 
-.who-is-item.full img {
+.who-is-item.full svg {
+  transition: 0.5s;
   width: 22vw;
+  fill: rgba(255, 255, 255, 1);
 }
 
 .who-is-item.full p {
@@ -437,6 +440,7 @@ header .container.header-wrapper {
 }
 
 .who-is-item h4 {
+  transition: 0.5s;
   font-family: 'Druk Cyr';
   font-size: 2.2vw;
   font-weight: 700;
@@ -451,6 +455,7 @@ header .container.header-wrapper {
 }
 
 .who-is-item p {
+  transition: 0.5s;
   font-family: 'Mona-sans';
   font-size: 0.7vw;
   font-weight: 600;
@@ -471,6 +476,7 @@ header .container.header-wrapper {
 }
 
 .who-is-main-block svg {
+  transition: 0.5s;
   width: 11vw;
   height: 11vw;
   margin-top: 1.4vw;
@@ -483,6 +489,7 @@ header .container.header-wrapper {
 }
 
 .who-item-icon-block svg {
+  transition: 0.5s;
   fill: white;
   width: 3.2vw;
   height: 3.2vw;
@@ -490,15 +497,37 @@ header .container.header-wrapper {
 
 .who-is-item-number .first {
   color: rgba(255, 255, 255, 1);
+  transition: 0.5s;
 }
 .who-is-item-number .second {
   color: rgba(255, 255, 255, 0.33);
+  transition: 0.5s;
 }
 
 .who-is-main-block .who-is-item-number .first {
   color: rgba(0, 0, 0, 1);
 }
 .who-is-main-block .who-is-item-number .second {
+  color: rgba(0, 0, 0, 0.33);
+}
+
+.who-is-item:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.who-is-item:hover p,
+.who-is-item:hover h4 {
+  color: rgba(0, 0, 0, 1);
+}
+
+.who-is-item:hover svg {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.who-is-item:hover .first {
+  color: rgba(0, 0, 0, 1);
+}
+.who-is-item:hover .second {
   color: rgba(0, 0, 0, 0.33);
 }
 
@@ -516,12 +545,8 @@ header .container.header-wrapper {
   width: 63vw;
 }
 
-.kit-squares {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 63vw;
-}
+
+
 
 .kit-marker-container {
   display: flex;
@@ -551,6 +576,13 @@ header .container.header-wrapper {
   width: 25vw;
 }
 
+.kit-list{
+  width: 33vw;
+  position: relative;
+  z-index: 999;
+  background-color: rgba(249, 249, 249, 1);
+}
+
 .kit-list ul {
   padding-left: 2vw;
   width: 25vw;
@@ -576,7 +608,8 @@ header .container.header-wrapper {
   width: 2.2vw;
   height: 2.2vw;
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .kit-list .kit-text {
@@ -584,6 +617,30 @@ header .container.header-wrapper {
   font-size: 1.2vw;
   font-weight: 500;
   line-height: 1.4vw;
+}
+
+.kit-squares {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  animation: levitate 4s ease-in-out infinite; /* Левітація */
+  right: 2.9vw;
+  width: 63vw;
+}
+
+@keyframes levitate {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-60%) translateX(10px) rotate(5deg); /* Підйом та поворот */
+  }
+}
+
+.kit-paralax-container {
+  width: fit-content;
+  overflow: hidden;
 }
 
 /* ============================ LEARN SECTION ================================= */
@@ -1306,7 +1363,7 @@ header .container.header-wrapper {
 
 .about-person-desc-container p {
   font-family: 'Mona-Sans';
-  font-size: 0.7vw;
+  font-size: 1vw;
   font-weight: 500;
   line-height: 1.1vw;
   width: 34vw;
