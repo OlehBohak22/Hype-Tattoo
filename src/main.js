@@ -8,7 +8,7 @@ const swiper = new Swiper('.about-swiper-container', {
   modules: [Navigation, Pagination],
 
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 25,
   loop: true,
 
   navigation: {
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function () {
       swiper = new Swiper('.learn-swiper-container', {
         modules: [Pagination],
 
-        slidesPerView: 1.1,
+        slidesPerView: 1,
         spaceBetween: 9,
         pagination: {
           el: '.swiper-pagination',
@@ -317,7 +317,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-
 
 document.addEventListener('DOMContentLoaded', function () {
   function moveJourneyInfoContainers() {

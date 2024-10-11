@@ -1,4 +1,11 @@
 @media (max-width: 1024px) {
+  .grid-container {
+    display: block;
+  }
+
+  .ex-student-section .container {
+    flex-direction: column;
+  }
   /* Header===================================== */
 
   header {
@@ -305,6 +312,7 @@
   /* ===================== LEARN_SECTION================================== */
 
   .learn-section {
+    overflow: hidden;
     background-size: contain;
     padding: 11.7vw 0 10.9vw 0;
     background-image: url(../img/learn/learn-bg-min.jfif);
@@ -342,8 +350,7 @@
 
   .learn-swiper-container {
     position: relative;
-    overflow: hidden;
-    width: 110%;
+    width: 100%;
     transform: translateX(-10px);
     padding-bottom: 10vw;
   }
@@ -637,25 +644,207 @@
 
   .tariff-price-container {
     margin-bottom: 9.6vw;
-}
+  }
 
   .tariff-price-container .current {
     font-size: 11.7vw;
     line-height: 15.2vw;
-}
+  }
 
-.tariff-price-container .old {
+  .tariff-price-container .old {
     font-size: 5.8vw;
     line-height: 7.4vw;
-}
+  }
 
-.tariff-btn-container {
+  .tariff-btn-container {
     margin-bottom: 6.6vw;
     gap: 3.4vw;
-}
+  }
 
-.tariff-bottom-marker span {
+  .tariff-bottom-marker span {
     font-size: 2.6vw;
     line-height: 3.4vw;
-}
+  }
+
+  /* ================================= OUR_TEAM ================================= */
+
+  .our-team-section {
+    background-image: url(/Hype-Tattoo/img/our-team/team-bg.jpg);
+    background-size: contain;
+    background-position: bottom;
+    padding: 17.6vw 0;
+    padding-bottom: 140vw;
+  }
+
+  .our-team-info-container {
+    width: auto;
+  }
+
+  .our-team-hexagone {
+    width: 16vw;
+    height: 16vw;
+    margin-bottom: 8.8vw;
+  }
+
+  .our-team-section .title {
+    margin-bottom: 5.8vw;
+  }
+
+  .our-team-desc {
+    font-size: 9.6vw;
+    line-height: 10.4vw;
+    width: auto;
+    margin-bottom: 5.8vw;
+  }
+
+  .our-team-text {
+    font-size: 3.7vw;
+    line-height: 4.8vw;
+    width: 58vw;
+    margin-bottom: 8.8vw;
+  }
+
+  .our-team-rules {
+    width: 32.5vw;
+    height: 9vw;
+  }
+
+  /* ABOUT SECTION ============================== */
+
+  .about-section {
+    padding-top: 40vw;
+    height: 300vw;
+  }
+
+  .about-section .pagination {
+    display: none;
+  }
+
+  .about-section .vector1 {
+    display: none;
+  }
+
+  .about-person-number-container {
+    display: none;
+  }
+
+  .person-name {
+    font-size: 6.6vw;
+    line-height: 7.4vw;
+  }
+
+  .marker {
+    font-size: 2.6vw;
+    line-height: 2.6vw;
+  }
+
+  .about-person-desc-container h3 {
+    font-size: 9.6vw;
+    line-height: 10.4vw;
+    margin-bottom: 4.2vw;
+  }
+
+  .about-person-info {
+    display: block;
+  }
+
+  .about-person-desc-container p {
+    font-size: 3.7vw;
+    line-height: 6.4vw;
+    width: auto;
+  }
+
+  .person-name-container {
+    display: flex;
+    gap: 3vw;
+    margin-top: 1vw;
+  }
+
+  .about-section .vector2 {
+    top: 10vw;
+    left: 40vw;
+    transform: scale(2);
+  }
+
+  .about-person-name-container {
+    gap: 6.1vw;
+    margin-bottom: 0;
+  }
+
+  .person-hologram-container {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20vw;
+  }
+
+  .about-person-desc-container {
+    position: absolute;
+    bottom: -100vw;
+  }
+
+  .about-swiper-container .swiper-navigation {
+    top: 30%;
+    left: 95%;
+    transform: translateX(-100%);
+    gap: 64vw;
+    height: fit-content;
+  }
+
+  .about-swiper-container .swiper-navigation .swiper-prev,
+  .about-swiper-container .swiper-navigation .swiper-next {
+    width: 12.8vw;
+    height: 12.8vw;
+  }
+
+  .about-swiper-container .swiper-navigation .swiper-prev svg,
+  .about-swiper-container .swiper-navigation .swiper-next svg {
+    width: 3.2vw;
+    height: 3.2vw;
+  }
+
+  .custom-pagination .pagination-bullet {
+    font-size: 2.4vw;
+    line-height: 3.4vw;
+  }
+
+  .custom-pagination .pagination-bullet:not(:last-child)::after {
+    width: 0.05vw;
+    height: 4.6vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+  }
+
+  .custom-pagination {
+    top: 20.2vw;
+    right: 5.3vw;
+
+    height: fit-content;
+  }
+
+  .about-swiper-container {
+    overflow: visible;
+  }
+
+  .tatto-style {
+    font-size: 6.4vw;
+    line-height: 7.2vw;
+    width: 21vw;
+  }
+
+  .tattoo-style-container:not(:last-child) {
+    right: 17vw;
+  }
+
+  .tattoo-style-container.experience {
+    position: absolute;
+    flex-direction: row-reverse;
+    gap: 6.1vw;
+    transform: translateY(-15vw);
+  }
+
+  .tattoo-style-container.experience span {
+    width: auto;
+  }
 }
