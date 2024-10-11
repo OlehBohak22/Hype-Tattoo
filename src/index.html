@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hype-Tattoo</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./glyph-button/glyph.css" />
+
     <link rel="stylesheet" href="./css/mobile.css" />
   </head>
   <body>
@@ -272,14 +274,18 @@
                 </div>
                 <div class="who-is-item full">
                   <svg>
-                    <use href="./img/hero/who-is-full-icon.svg#icon-who-is-full-icon"></use>
+                    <use
+                      href="./img/hero/who-is-full-icon.svg#icon-who-is-full-icon"
+                    ></use>
                   </svg>
                   <p>
                     To be able to participate in this course you must be over 18
                     years old
                   </p>
                   <svg>
-                    <use href="./img/hero/who-is-full-icon.svg#icon-who-is-full-icon"></use>
+                    <use
+                      href="./img/hero/who-is-full-icon.svg#icon-who-is-full-icon"
+                    ></use>
                   </svg>
                 </div>
               </div>
@@ -340,8 +346,8 @@
         </div>
 
         <div class="kit-paralax-container">
-        <img class="kit-bg" src="./img/kit/kit-bg.png" alt="" />
-        <img class="kit-squares" src="./img/kit/kit-squares.png" alt="" />
+          <img class="kit-bg" src="./img/kit/kit-bg.png" alt="" />
+          <img class="kit-squares" src="./img/kit/kit-squares.png" alt="" />
         </div>
       </section>
 
@@ -420,6 +426,8 @@
                 </div>
               </div>
             </div>
+
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -448,6 +456,7 @@
                 </div>
 
                 <p class="journey-item-text">Introduction & Theory</p>
+                <div class="joiurney-nfo-containerJS active"></div>
               </div>
 
               <div class="journey-item" data-target="2">
@@ -457,6 +466,7 @@
                 </div>
 
                 <p class="journey-item-text">Foundations of Tattooing</p>
+                <div class="joiurney-nfo-containerJS"></div>
               </div>
 
               <div class="journey-item" data-target="3">
@@ -466,6 +476,7 @@
                 </div>
 
                 <p class="journey-item-text">Artistic Foundations</p>
+                <div class="joiurney-nfo-containerJS"></div>
               </div>
 
               <div class="journey-item" data-target="4">
@@ -475,6 +486,7 @@
                 </div>
 
                 <p class="journey-item-text">Masterclass</p>
+                <div class="joiurney-nfo-containerJS"></div>
               </div>
 
               <div class="journey-item" data-target="5">
@@ -484,6 +496,7 @@
                 </div>
 
                 <p class="journey-item-text">Practical Training</p>
+                <div class="joiurney-nfo-containerJS"></div>
               </div>
 
               <div class="journey-item" data-target="6">
@@ -493,6 +506,7 @@
                 </div>
 
                 <p class="journey-item-text">Practice & Masterclass</p>
+                <div class="joiurney-nfo-containerJS"></div>
               </div>
 
               <div class="journey-item" data-target="7">
@@ -502,6 +516,7 @@
                 </div>
 
                 <p class="journey-item-text">Portfolio Building</p>
+                <div class="joiurney-nfo-containerJS"></div>
               </div>
 
               <div class="journey-item" data-target="8">
@@ -511,6 +526,7 @@
                 </div>
 
                 <p class="journey-item-text">Design Practice</p>
+                <div class="joiurney-nfo-containerJS"></div>
               </div>
 
               <div class="journey-item" data-target="9">
@@ -529,6 +545,7 @@
                 </div>
 
                 <p class="journey-item-text">Marketing & Certification</p>
+                <div class="joiurney-nfo-containerJS"></div>
               </div>
             </div>
 
@@ -861,7 +878,9 @@
               <div class="journey-desc-block">
                 <div class="journey-teachers-name">
                   <img src="./img/journey/student-cap.svg" alt="Cap" />
-                  <p style="white-space: nowrap;">David, Ruslan, Demus and Lara</p>
+                  <p style="white-space: nowrap">
+                    David, Ruslan, Demus and Lara
+                  </p>
                 </div>
 
                 <p>
@@ -905,7 +924,11 @@
           </p>
 
           <div class="best-link-container">
-            <img src="./img/best/left.svg" alt="Left" />
+            <img
+              class="best-bottom-arrow-left"
+              src="./img/best/left.svg"
+              alt="Left"
+            />
             <a class="join-link" href="">
               <div class="app" id="app3" data-sr-text="JOIN THE COURSE"></div>
 
@@ -915,7 +938,11 @@
                 </svg>
               </div>
             </a>
-            <img src="./img/best/right.svg" alt="right" />
+            <img
+              class="best-bottom-arrow-right"
+              src="./img/best/right.svg"
+              alt="right"
+            />
           </div>
         </div>
       </section>
@@ -1983,10 +2010,7 @@
             </h2>
 
             <a class="join-link" href="">
-              <div class="app" id="app10"
-                   data-sr-text="Join the course">
-
-              ></div>
+              <div class="app" id="app10" data-sr-text="Join the course">></div>
 
               <div class="join-link-arrow">
                 <svg class="arrow-icon">
@@ -2367,11 +2391,7 @@
             </div>
 
             <a class="join-link" href="">
-             <div id="app24" class="app"
-                   data-sr-text="Consultation">
-
-            
-            ></div>
+              <div id="app24" class="app" data-sr-text="Consultation">></div>
               <div class="join-link-arrow">
                 <svg class="arrow-icon">
                   <use href="./img/arrow.svg#icon-arrow"></use>
@@ -2418,11 +2438,7 @@
             </div>
 
             <a class="join-link" href="">
-              <div id="app24" class="app"
-                   data-sr-text="Processed">
-
-            
-            ></div>
+              <div id="app24" class="app" data-sr-text="Processed">></div>
               <div class="join-link-arrow">
                 <svg class="arrow-icon">
                   <use href="./img/arrow.svg#icon-arrow"></use>
@@ -2485,11 +2501,7 @@
           </div>
 
           <a class="join-link" href="">
-            <div id="app11" class="app"
-                   data-sr-text="Join the course">
-
-            
-            ></div>
+            <div id="app11" class="app" data-sr-text="Join the course">></div>
             <div class="join-link-arrow">
               <svg class="arrow-icon">
                 <use href="img/arrow.svg#icon-arrow"></use>
@@ -2507,7 +2519,6 @@
         </div>
       </div>
     </footer>
-    <link rel="stylesheet" href="./glyph-button/glyph.css" />
     <script type="module" src="./main.js"></script>
     <script type="module" src="./glyph-button/glyph.jsx"></script>
   </body>

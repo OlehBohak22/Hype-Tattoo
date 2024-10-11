@@ -65,6 +65,15 @@ html {
   overflow: hidden;
 }
 
+.title {
+  font-family: 'Druk Cyr';
+  font-size: 6.9vw;
+  font-weight: 700;
+  line-height: 6.8vw;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+}
+
 @media (max-width: 1024px) {
   .container {
     width: 93.3vw;
@@ -75,4 +84,6 @@ html {
     font-size: 16.5vw;
     line-height: 16.5vw;
   }
+
+ 
 }

@@ -47,7 +47,6 @@
   }
 
   .hero-section .join-link {
-    margin-bottom: 34vw;
   }
 
   .just-a-month-block {
@@ -62,6 +61,10 @@
 
   .just-a-month-block svg {
     width: 12vw;
+  }
+
+  .hero-title-block {
+    margin-bottom: 34vw;
   }
 
   .hero-title-block p {
@@ -79,6 +82,10 @@
 
   .join-link {
     gap: 0.73vw;
+  }
+
+  button > span:not(.sr-only) {
+    font-size: 3.7vw;
   }
 
   .join-link-text {
@@ -226,7 +233,7 @@
     gap: 7vw;
   }
 
-  .who-is-item.full img {
+  .who-is-item.full svg {
     width: 65.6vw;
   }
 
@@ -272,8 +279,9 @@
   .kit-list .kit-number {
     font-size: 3.2vw;
     line-height: 6.4vw;
-    padding: 0.3vw 2.9vw;
     border: 0.05vw solid black;
+    width: 6.4vw;
+    height: 6.4vw;
   }
 
   .kit-list .kit-text {
@@ -293,4 +301,361 @@
   .kit-list ul li:not(:last-child) {
     margin-bottom: 3.2vw;
   }
+
+  /* ===================== LEARN_SECTION================================== */
+
+  .learn-section {
+    background-size: contain;
+    padding: 11.7vw 0 10.9vw 0;
+    background-image: url(../img/learn/learn-bg-min.jfif);
+    background-position: 0 -16vw;
+    padding-bottom: 0;
+  }
+
+  .learn-list .column:nth-child(2) {
+    position: static;
+  }
+
+  .learn-list .column:nth-child(1) .learn-item:nth-child(even) {
+    transform: translateX(0);
+  }
+
+  .learn-list .column:nth-child(2) .learn-item:nth-child(even) {
+    transform: translateX(0);
+  }
+
+  .learn-list {
+    /* display: block; */
+    justify-content: flex-start;
+  }
+
+  .learn-list .column {
+    display: flex;
+  }
+
+  .learn-item {
+    width: auto;
+    padding: 8.5vw 5.8vw 0 8.5vw;
+    border: 0.2vw solid rgba(190, 190, 190, 1);
+    min-height: 89vw;
+  }
+
+  .learn-swiper-container {
+    position: relative;
+    overflow: hidden;
+    width: 110%;
+    transform: translateX(-10px);
+    padding-bottom: 10vw;
+  }
+
+  .learn-section .title {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 63vw;
+  }
+
+  .learn-item svg {
+    width: 17vw;
+    height: 17vw;
+    margin-bottom: 16vw;
+  }
+
+  .learn-item h4 {
+    font-size: 5.8vw;
+    line-height: 8.2vw;
+    margin-bottom: 4.2vw;
+  }
+
+  .learn-item p {
+    font-size: 4.2vw;
+    line-height: 6.4vw;
+  }
+
+  .learn-swiper-container .swiper-pagination {
+    bottom: 0 !important;
+  }
+
+  .learn-swiper-container .swiper-pagination-bullet {
+    height: 1.6vw;
+    width: 5.3vw;
+    transition: 0.3s;
+    border-radius: 10.6vw;
+  }
+
+  .learn-swiper-container .swiper-pagination-bullet-active {
+    height: 1.6vw;
+    width: 8.8vw;
+    background-color: rgba(0, 208, 210, 1);
+    border-radius: 10.6vw;
+  }
+
+  /* ========================= JOURNEY_SECTION ======================= */
+
+  .journey-section {
+    padding: 18vw 0 15vw 0;
+  }
+
+  .journey-title-container {
+    display: block;
+    margin-bottom: 18vw;
+  }
+
+  .journey-section .title {
+    width: 70vw;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 7.4vw;
+  }
+
+  .journey-info-title-block h3 {
+    font-size: 6.4vw;
+    line-height: 6.4vw;
+    margin-bottom: 1.8vw;
+    text-align: center;
+  }
+
+  .journey-info-title-block p {
+    font-size: 3.6vw;
+    line-height: 4.8vw;
+    max-width: none;
+    text-align: center;
+  }
+
+  .journey-table-container {
+    width: auto;
+    border-right: none;
+    flex-shrink: 0;
+  }
+
+  .journey-item-number-marker div {
+    font-size: 2.6vw;
+    line-height: 4vw;
+    font-weight: 700;
+    padding: 1.3vw 2.6vw;
+    border-radius: 13.3vw;
+    border: 0.05vw solid black;
+  }
+
+  .journey-item {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5.3vw;
+    column-gap: 4vw;
+
+    align-items: center;
+    padding: 6.6vw 0 2.6vw 0;
+    cursor: pointer;
+  }
+
+  .journey-item-text {
+    font-size: 4.8vw;
+    line-height: 4.8vw;
+  }
+
+  .journey-info {
+    position: relative;
+    display: block;
+  }
+
+  .journey-img-block div {
+    width: 23.4vw;
+    margin-right: -3.2vw;
+  }
+
+  .journey-teachers-name img {
+    width: 8.8vw;
+  }
+
+  .journey-desc-block p {
+    font-size: 3.7vw;
+    line-height: 4.8vw;
+    max-width: 85vw;
+  }
+
+  .journey-teachers-name p {
+    font-size: 4.8vw;
+    line-height: 4.8vw;
+    max-width: none;
+  }
+
+  .journey-teachers-name {
+    gap: 3.2vw;
+    margin-bottom: 5.3vw;
+  }
+
+  .journey-desc-block {
+    margin-bottom: 6.4vw;
+  }
+
+  .journey-item.active {
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 10.6vw;
+  }
+
+  /* Приховуємо контейнери за замовчуванням */
+  .joiurney-nfo-containerJS {
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s;
+  }
+
+  /* Активний контейнер буде розгортатися */
+  .joiurney-nfo-containerJS.active {
+    max-height: 1000px; /* Максимальна висота для розгортання (змінюйте відповідно до вмісту) */
+  }
+
+  /* ========================== BEST SECTION==================================== */
+
+  .best-section {
+    padding: 17vw 0 33vw 0;
+  }
+
+  .smiles-icon {
+    width: 76vw;
+    margin-bottom: 17vw;
+  }
+
+  .best-bg-wrap {
+    width: 100%;
+    border: 0.08vw solid #ffffff;
+    margin-bottom: 11.4vw;
+  }
+
+  .best-bg-wrap h2 {
+    font-size: 14.9vw;
+    line-height: 14.9vw;
+    bottom: 9.1vw;
+    left: 0;
+  }
+
+  .best-desc-text {
+    font-size: 4.8vw;
+    line-height: 6.1vw;
+    width: 85vw;
+    margin-bottom: 6.9vw;
+  }
+
+  .best-link-container {
+    display: block;
+  }
+
+  .best-link-container .join-link {
+    margin: 0 auto;
+  }
+
+  .best-link-container img {
+    width: 24.8vw;
+  }
+
+  .best-bottom-arrow-right {
+    position: absolute;
+    bottom: 21vw;
+    right: 5.3vw;
+  }
+
+  .best-bottom-arrow-left {
+    position: absolute;
+    bottom: 21vw;
+    left: 5.3vw;
+  }
+
+  .best-section::before,
+  .best-section::after {
+    width: 80.5vw;
+    height: 69.5vw;
+    filter: blur(61vw);
+  }
+
+  /* TARIFF_SECTION ========================================== */
+
+  .tariff-section {
+    padding: 19.4vw 0 15vw 0;
+  }
+
+  .tariff-section .title {
+    margin-bottom: 16.5vw;
+  }
+
+  .tariff-list {
+    display: grid;
+    gap: 5.8vw;
+    grid-template-rows: auto;
+    grid-template-columns: none;
+  }
+
+  .tariff-item {
+    padding: 9.3vw 4.5vw;
+  }
+
+  .tariff-title-container {
+    margin-bottom: 9.6vw;
+    padding: 0 3.7vw 0 3.2vw;
+  }
+
+  .tariff-title-container h3 {
+    font-size: 8.5vw;
+    line-height: 10.9vw;
+  }
+
+  .tariff-title-container svg {
+    width: 13.3vw;
+    height: 13.3vw;
+  }
+
+  .tariff-info-item:not(:last-child) {
+    margin-bottom: 6.6vw;
+  }
+
+  .tariff-info-title-container {
+    gap: 1.8vw;
+    margin-bottom: 2.4vw;
+  }
+
+  .tariff-info-title-container svg {
+    min-width: 2.9vw;
+    min-height: 2.9vw;
+    max-width: 2.9vw;
+    max-height: 2.9vw;
+  }
+
+  .tariff-info-title-container h5 {
+    font-size: 3.7vw;
+    line-height: 3.7vw;
+  }
+
+  .tariff-info-item p {
+    font-size: 3.2vw;
+    line-height: 3.2vw;
+  }
+
+  .tariff-info-list {
+    margin-bottom: 7.2vw;
+    padding-left: 3.7vw;
+    width: 62vw;
+  }
+
+  .tariff-price-container {
+    margin-bottom: 9.6vw;
+}
+
+  .tariff-price-container .current {
+    font-size: 11.7vw;
+    line-height: 15.2vw;
+}
+
+.tariff-price-container .old {
+    font-size: 5.8vw;
+    line-height: 7.4vw;
+}
+
+.tariff-btn-container {
+    margin-bottom: 6.6vw;
+    gap: 3.4vw;
+}
+
+.tariff-bottom-marker span {
+    font-size: 2.6vw;
+    line-height: 3.4vw;
+}
 }

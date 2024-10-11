@@ -218,3 +218,153 @@ popups.forEach(popup => {
   });
 });
 
+// LEarn слайдер мобільний
+
+document.addEventListener('DOMContentLoaded', function () {
+  let swiper; // Зберігатимемо екземпляр Swiper для можливого знищення
+
+  function initLearnListSwiper() {
+    const learnList = document.querySelector('.learn-list');
+
+    if (window.innerWidth < 1024 && learnList && !swiper) {
+      // Додаємо клас learn-swiper-container до learn-list
+      learnList.classList.add('learn-swiper-container');
+
+      // Створюємо контейнер swiper-wrapper
+      const swiperWrapper = document.createElement('div');
+      swiperWrapper.classList.add('swiper-wrapper');
+
+      // Отримуємо всі елементи .column
+      const columns = document.querySelectorAll('.learn-list .column');
+
+      columns.forEach(function (column) {
+        // Отримуємо всі елементи learn-item всередині кожного column
+        const learnItems = Array.from(column.children);
+
+        // Для кожного learn-item додаємо клас swiper-slide і переміщуємо до swiper-wrapper
+        learnItems.forEach(function (item) {
+          item.classList.add('swiper-slide');
+          swiperWrapper.appendChild(item);
+        });
+
+        // Видаляємо сам column
+        column.remove();
+      });
+
+      // Додаємо swiper-wrapper всередину learn-list
+      learnList.appendChild(swiperWrapper);
+
+      // Ініціалізуємо Swiper тільки якщо ширина менше 1024px
+      swiper = new Swiper('.learn-swiper-container', {
+        modules: [Pagination],
+
+        slidesPerView: 1.1,
+        spaceBetween: 9,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    }
+  }
+
+  function destroyLearnListSwiper() {
+    if (window.innerWidth >= 1024 && swiper) {
+      // Знищуємо Swiper і повертаємо початкову структуру
+      swiper.destroy(true, true);
+      swiper = null;
+
+      const learnList = document.querySelector('.learn-list');
+      const swiperWrapper = learnList.querySelector('.swiper-wrapper');
+      const learnItems = Array.from(swiperWrapper.children);
+
+      // Створюємо колонки знову
+      const column1 = document.createElement('div');
+      column1.classList.add('column');
+      const column2 = document.createElement('div');
+      column2.classList.add('column');
+
+      // Відновлюємо початкові колонки та елементи
+      learnItems.slice(0, 2).forEach(item => {
+        item.classList.remove('swiper-slide');
+        column1.appendChild(item);
+      });
+
+      learnItems.slice(2).forEach(item => {
+        item.classList.remove('swiper-slide');
+        column2.appendChild(item);
+      });
+
+      // Очищаємо learn-list і додаємо колонки назад
+      swiperWrapper.remove();
+      learnList.classList.remove('learn-swiper-container');
+      learnList.appendChild(column1);
+      learnList.appendChild(column2);
+    }
+  }
+
+  // Запускаємо при завантаженні сторінки
+  if (window.innerWidth < 1024) {
+    initLearnListSwiper();
+  }
+
+  // Слухаємо зміну розміру вікна
+  window.addEventListener('resize', function () {
+    if (window.innerWidth < 1024) {
+      initLearnListSwiper();
+    } else {
+      destroyLearnListSwiper();
+    }
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  function moveJourneyInfoContainers() {
+    if (window.innerWidth < 1024) {
+      const journeyItems = document.querySelectorAll('.journey-item');
+      const journeyInfoContainers = document.querySelectorAll(
+        '.journey-info-container'
+      );
+
+      journeyItems.forEach(item => {
+        const target = item.getAttribute('data-target');
+        const correspondingInfo = document.querySelector(
+          `.journey-info-container[data-info="${target}"]`
+        );
+        const destination = item.querySelector('.joiurney-nfo-containerJS');
+
+        if (correspondingInfo && destination) {
+          destination.appendChild(correspondingInfo); // Переносимо відповідний блок journey-info-container
+        }
+
+        // Додаємо обробник кліку для розгортання/згортання
+        item.addEventListener('click', function () {
+          // Закриваємо всі відкриті контейнери перед відкриттям нового
+          journeyItems.forEach(i => {
+            const container = i.querySelector('.joiurney-nfo-containerJS');
+            if (container) {
+              container.classList.remove('active');
+            }
+          });
+
+          // Додаємо/видаляємо клас для поточного елемента
+          const currentContainer = item.querySelector(
+            '.joiurney-nfo-containerJS'
+          );
+          if (currentContainer) {
+            currentContainer.classList.toggle('active');
+          }
+        });
+      });
+    }
+  }
+
+  // Викликаємо функцію при завантаженні сторінки
+  moveJourneyInfoContainers();
+
+  // Додаємо слухач події resize для повторної перевірки при зміні розміру вікна
+  window.addEventListener('resize', function () {
+    moveJourneyInfoContainers();
+  });
+});

@@ -3,14 +3,7 @@
 @import url(../fonts/Mona-Sans/stylesheet.css);
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
 
-.title {
-  font-family: 'Druk Cyr';
-  font-size: 6.9vw;
-  font-weight: 700;
-  line-height: 6.8vw;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 1);
-}
+
 
 /* ============================== HEADER =====================*/
 header {
@@ -314,6 +307,7 @@ header .container.header-wrapper {
   gap: 0.2vw;
   cursor: pointer;
   width: fit-content;
+  white-space: nowrap;
 }
 
 .app {
@@ -606,6 +600,7 @@ header .container.header-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .kit-list .kit-text {

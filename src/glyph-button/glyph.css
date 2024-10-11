@@ -125,6 +125,13 @@ button > span:not(.sr-only)::after {
 
 }
 
+@media (max-width:1024px) {
+   .join-link button {
+    padding: 1rem 2rem;
+}
+  
+}
+
 
 
 
