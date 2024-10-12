@@ -1689,8 +1689,8 @@ header .container.header-wrapper {
 .faq-item .faq-img {
   border: 0.06vw solid rgba(65, 65, 65, 1);
   border-radius: 100%;
-  width: 4.2vw;
-  height: 4.2vw;
+  min-width: 4.2vw;
+  min-height: 4.2vw;
   display: flex;
   justify-content: center;
   align-items: center;

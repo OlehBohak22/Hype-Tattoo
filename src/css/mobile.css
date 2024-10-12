@@ -3,9 +3,6 @@
     display: block;
   }
 
-  .ex-student-section .container {
-    flex-direction: column;
-  }
   /* Header===================================== */
 
   header {
@@ -669,8 +666,6 @@
   /* ================================= OUR_TEAM ================================= */
 
   .our-team-section {
-    background-image: url(/Hype-Tattoo/img/our-team/team-bg.jpg);
-    background-size: contain;
     background-position: bottom;
     padding: 17.6vw 0;
     padding-bottom: 140vw;
@@ -713,7 +708,7 @@
 
   .about-section {
     padding-top: 40vw;
-    height: 300vw;
+    height: 280vw;
   }
 
   .about-section .pagination {
@@ -780,7 +775,7 @@
 
   .about-person-desc-container {
     position: absolute;
-    bottom: -100vw;
+    bottom: -90vw;
   }
 
   .about-swiper-container .swiper-navigation {
@@ -830,21 +825,210 @@
   .tatto-style {
     font-size: 6.4vw;
     line-height: 7.2vw;
-    width: 21vw;
+    width: 48vw;
   }
 
   .tattoo-style-container:not(:last-child) {
-    right: 17vw;
+    position: absolute;
+    right: 0;
   }
 
   .tattoo-style-container.experience {
     position: absolute;
     flex-direction: row-reverse;
-    gap: 6.1vw;
     transform: translateY(-15vw);
+    gap: 6vw;
   }
 
   .tattoo-style-container.experience span {
     width: auto;
+  }
+
+  .tatto-style::before {
+    left: 0;
+    width: 12.5vw;
+    height: 0.05vw;
+  }
+
+  .tattoo-style-container.experience .tatto-style::before {
+    left: auto;
+    right: -7vw;
+    width: 8vw;
+    height: 0.05vw;
+    transform: rotate(45deg);
+  }
+
+  .tattoo-style-container.experience .tatto-style {
+    display: block;
+    width: auto;
+  }
+
+  .tattoo-style-container .marker {
+    margin-top: -4vw;
+  }
+
+  .person-name::after {
+    width: 3.5vw;
+    transform: rotate(45deg);
+  }
+
+  /* =========================== EX_STUDENT SECTION ============================ */
+  .ex-student-section {
+    padding: 12.2vw 0 19.2vw 0;
+  }
+
+  .ex-student-section .container {
+    position: relative;
+    display: block;
+  }
+
+  .ex-student-title-container .title {
+    width: 90vw;
+    margin-bottom: 11.7vw;
+    text-align: center;
+    font-size: 16vw;
+  }
+
+  .ex-student-section .join-link {
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+  }
+
+  .ex-student-swiper-container {
+    background-image: url(/Hype-Tattoo/img/ex-student/ex-student-swiper-bg.png);
+    background-size: contain;
+    background-position: top;
+    padding-top: 1.9vw;
+    padding-bottom: 27.4vw;
+    overflow: visible;
+    margin-bottom: 11.4vw;
+  }
+
+  .ex-student-swiper-container .swiper-btn-next {
+    background-color: rgba(0, 208, 210, 1);
+    width: 16vw;
+    height: 16vw;
+    right: 50%;
+    top: auto;
+    bottom: 0;
+    transform: translateY(0) translateX(110%);
+  }
+
+  .ex-student-swiper-container .swiper-btn-prev {
+    background-color: rgba(0, 208, 210, 1);
+    width: 16vw;
+    height: 16vw;
+    left: 50%;
+    top: auto;
+    bottom: 0;
+
+    transform: translateY(0) translateX(-110%);
+  }
+
+  .ex-student-swiper-container .swiper-btn-next svg {
+    stroke: black;
+    width: 4.2vw;
+    height: 4.2vw;
+  }
+
+  .ex-student-swiper-container .swiper-btn-prev svg {
+    stroke: black;
+    width: 4.2vw;
+    height: 4.2vw;
+  }
+
+  .student-card-desc {
+    font-size: 3.7vw;
+    line-height: 4.2vw;
+    margin-bottom: 2.6vw;
+    width: auto;
+  }
+
+  .student-desc-container .add-desc {
+    font-size: 3.7vw;
+    line-height: 4.2vw;
+    width: auto;
+  }
+
+  .ex-student-swiper-container .swiper-slide {
+    width: 76.5vw !important;
+    height: 112vw !important;
+  }
+
+  .ex-student-card {
+    padding: 30.4vw 10.4vw 8.5vw 8vw;
+    justify-content: space-between;
+  }
+
+  .student-person-info img {
+    width: 12.8vw;
+  }
+
+  .student-person-info p {
+    font-size: 3.7vw;
+    line-height: 4.5vw;
+  }
+
+  .student-person-info {
+    gap: 3.2vw;
+  }
+
+  .quotes {
+    top: 2.1vw;
+    right: 2.1vw;
+    width: 40.2vw;
+  }
+
+  .dn {
+    display: none;
+  }
+
+  /* FAQ SECTION ================================ */
+
+  .faq-section {
+    padding-bottom: 13.3vw;
+  }
+
+  .faq-section .container {
+    display: block;
+  }
+
+  .faq-section .title {
+    margin-bottom: 9vw;
+  }
+
+  .faq-container {
+    width: auto;
+  }
+
+  .faq-item {
+    padding: 5.8vw 0;
+    border-top: 0.06vw solid rgba(65, 65, 65, 1);
+  }
+
+  .faq-item p {
+    font-size: 3.7vw;
+    line-height: 4.2vw;
+    width: 62vw;
+  }
+
+  .faq-acardeon-js p {
+    width: auto;
+  }
+
+  .faq-item .faq-img {
+    border: 0.06vw solid rgba(65, 65, 65, 1);
+    border-radius: 100%;
+    min-width: 8.8vw;
+    min-height: 8.8vw;
+  }
+
+  .faq-item .faq-img img {
+    width: 3.8vw;
+  }
+
+  .faq-item.active .faq-title-container {
+    margin-bottom: 2vw;
   }
 }

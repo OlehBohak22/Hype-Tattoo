@@ -367,3 +367,29 @@ document.addEventListener('DOMContentLoaded', function () {
     moveJourneyInfoContainers();
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  function moveJoinLink() {
+    const joinLink = document.querySelector('.join-link');
+    const container = document.querySelector('#feedback .container');
+    const titleContainer = document.querySelector(
+      '.ex-student-title-container'
+    );
+
+    if (window.innerWidth < 1024) {
+      if (container && !container.contains(joinLink)) {
+        container.appendChild(joinLink);
+      }
+    } else {
+      if (titleContainer && !titleContainer.contains(joinLink)) {
+        titleContainer.appendChild(joinLink);
+      }
+    }
+  }
+
+  // Виклик функції при завантаженні сторінки
+  moveJoinLink();
+
+  // Додавання обробника для зміни розміру вікна
+  window.addEventListener('resize', moveJoinLink);
+});

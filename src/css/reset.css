@@ -27,13 +27,12 @@ button {
   cursor: pointer;
 }
 
-input{
+input {
   outline: none;
 }
 
 img,
-video
- {
+video {
   display: block;
   max-width: 100%;
   height: auto;
@@ -55,6 +54,10 @@ main {
   width: 94vw;
   padding: 0 0.5vw;
   margin: 0 auto;
+}
+
+section {
+  /* overflow: hidden; */
 }
 
 html {
@@ -84,6 +87,4 @@ html {
     font-size: 16.5vw;
     line-height: 16.5vw;
   }
-
- 
 }
