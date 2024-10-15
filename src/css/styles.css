@@ -3,8 +3,6 @@
 @import url(../fonts/Mona-Sans/stylesheet.css);
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
 
-
-
 /* ============================== HEADER =====================*/
 header {
   position: relative;
@@ -1521,6 +1519,18 @@ header .container.header-wrapper {
   margin-top: 0.3vw;
 }
 
+.no-controls {
+  pointer-events: none; /* Забороняє взаємодію з елементом */
+}
+
+.no-controls::-webkit-media-controls {
+  display: none !important; /* Прибирає елементи управління у WebKit-браузерах (Safari, Chrome) */
+}
+
+.no-controls::-webkit-media-controls-overlay-play-button {
+  display: none !important; /* Прибирає кнопку Play у Safari на мобільних пристроях */
+}
+
 /* =========================== EX_STUDENT_SECTION ================================ */
 
 .ex-student-section {
@@ -1731,6 +1741,10 @@ header .container.header-wrapper {
 
 .faq-item.active .faq-img img {
   transform: rotate(180deg);
+}
+
+.dn {
+  display: none;
 }
 
 /* FOOTER =============================== */
